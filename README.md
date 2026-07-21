@@ -6,6 +6,7 @@ A Claude Code plugin marketplace with personal skills.
 
 - **learnings** — extract non-obvious learnings from a session into `AGENTS.md`.
 - **just-use-postgres** — architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit.
+- **mechanical-sympathy** — find, verify, and rank CPU-friendly improvements in hot paths.
 
 ## Using this marketplace
 
@@ -15,12 +16,13 @@ From Claude Code:
 /plugin marketplace add ~/git/skills
 /plugin install learnings@benjamin-skills
 /plugin install just-use-postgres@benjamin-skills
+/plugin install mechanical-sympathy@benjamin-skills
 ```
 
-Or point at the GitHub repo once pushed:
+Or point at the GitHub repo:
 
 ```
-/plugin marketplace add <your-org-or-user>/skills
+/plugin marketplace add Randomblock1/skills
 ```
 
 ## Adding a new skill

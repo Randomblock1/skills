@@ -14,6 +14,11 @@
       "name": "just-use-postgres",
       "source": "./plugins/just-use-postgres",
       "description": "Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit"
+    },
+    {
+      "name": "mechanical-sympathy",
+      "source": "./plugins/mechanical-sympathy",
+      "description": "Find, verify, and rank CPU-friendly improvements in hot paths (cache layout, branches, allocations)"
     }
   ]
 }

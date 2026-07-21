@@ -1,0 +1,8 @@
+{
+  "name": "mechanical-sympathy",
+  "description": "Find, verify, and rank CPU-friendly improvements in hot paths (cache layout, branches, allocations)",
+  "version": "0.1.0",
+  "author": {
+    "name": "Benjamin Gonzalez"
+  }
+}
