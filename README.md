@@ -1,4 +1,4 @@
-# benjamin-skills
+# randomblock1-skills
 
 A Claude Code plugin marketplace with personal skills.
 
@@ -14,9 +14,9 @@ From Claude Code:
 
 ```
 /plugin marketplace add ~/git/skills
-/plugin install learnings@benjamin-skills
-/plugin install just-use-postgres@benjamin-skills
-/plugin install mechanical-sympathy@benjamin-skills
+/plugin install learnings@randomblock1-skills
+/plugin install just-use-postgres@randomblock1-skills
+/plugin install mechanical-sympathy@randomblock1-skills
 ```
 
 Or point at the GitHub repo:
