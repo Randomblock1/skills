@@ -1,11 +1,11 @@
 ---
 name: learnings
-description: Analyze the current session and extract non-obvious learnings to AGENTS.md
+description: Analyze the current session and extract non-obvious learnings to AGENTS.md. Use when the user asks to capture learnings, update AGENTS.md from this session, or distill what was discovered while debugging or exploring.
 user-invocable: true
 argument-hint: [focus area]
 ---
 
-Analyze this session and extract non-obvious learnings to add to the project AGENTS.md file. If the user provides a focus area via $ARGUMENTS, concentrate on that topic.
+Analyze this session and extract non-obvious learnings to add to the project AGENTS.md file. If the user provides a focus area (slash-command args or in the request), concentrate on that topic.
 
 ## What counts as a learning (non-obvious discoveries only)
 

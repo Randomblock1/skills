@@ -4,21 +4,31 @@
     "name": "Benjamin Gonzalez",
     "email": "randomblock1@pm.me"
   },
+  "metadata": {
+    "description": "Personal agent skills for Claude Code, Codex, Cursor, and other Agent Skills clients",
+    "version": "1.0.0"
+  },
   "plugins": [
     {
       "name": "learnings",
-      "source": "./plugins/learnings",
-      "description": "Extract non-obvious learnings from a session into AGENTS.md"
+      "description": "Extract non-obvious learnings from a session into AGENTS.md",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/learnings"]
     },
     {
       "name": "just-use-postgres",
-      "source": "./plugins/just-use-postgres",
-      "description": "Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit"
+      "description": "Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/just-use-postgres"]
     },
     {
       "name": "mechanical-sympathy",
-      "source": "./plugins/mechanical-sympathy",
-      "description": "Find, verify, and rank CPU-friendly improvements in hot paths (cache layout, branches, allocations)"
+      "description": "Find, verify, and rank CPU-friendly improvements in hot paths (cache layout, branches, allocations)",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/mechanical-sympathy"]
     }
   ]
 }

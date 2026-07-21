@@ -1,8 +1,0 @@
-{
-  "name": "just-use-postgres",
-  "description": "Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit",
-  "version": "0.1.0",
-  "author": {
-    "name": "Benjamin Gonzalez"
-  }
-}

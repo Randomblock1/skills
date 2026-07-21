@@ -1,8 +1,0 @@
-{
-  "name": "learnings",
-  "description": "Extract non-obvious learnings from a session into AGENTS.md",
-  "version": "0.1.0",
-  "author": {
-    "name": "Benjamin Gonzalez"
-  }
-}

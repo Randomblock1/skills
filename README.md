@@ -1,32 +1,66 @@
 # randomblock1-skills
 
-A Claude Code plugin marketplace with personal skills.
+Personal [Agent Skills](https://agentskills.io/) for coding agents — Claude Code, Codex, Cursor, and anything else that reads `SKILL.md`.
 
-## Plugins
+## Skills
 
-- **learnings** — extract non-obvious learnings from a session into `AGENTS.md`.
-- **just-use-postgres** — architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit.
-- **mechanical-sympathy** — find, verify, and rank CPU-friendly improvements in hot paths.
+| Skill | Description |
+| --- | --- |
+| [learnings](./skills/learnings) | Extract non-obvious session learnings into `AGENTS.md` |
+| [just-use-postgres](./skills/just-use-postgres) | Prefer Postgres-based data infrastructure where it fits |
+| [mechanical-sympathy](./skills/mechanical-sympathy) | Find, verify, and rank CPU-friendly hot-path improvements |
 
-## Using this marketplace
+## Install (Codex, Cursor, Claude Code, …)
 
-From Claude Code:
+Via the [skills](https://skills.sh/) CLI — installs into the agents you have locally:
+
+```bash
+npx skills add Randomblock1/skills
+```
+
+Or from a local clone:
+
+```bash
+npx skills add ~/git/skills
+```
+
+Pick specific skills or agents:
+
+```bash
+npx skills add Randomblock1/skills --skill learnings just-use-postgres
+npx skills add Randomblock1/skills --agent codex cursor claude-code
+```
+
+## Claude Code marketplace (optional)
+
+Still works as a Claude Code plugin marketplace:
 
 ```
-/plugin marketplace add ~/git/skills
+/plugin marketplace add Randomblock1/skills
 /plugin install learnings@randomblock1-skills
 /plugin install just-use-postgres@randomblock1-skills
 /plugin install mechanical-sympathy@randomblock1-skills
 ```
 
-Or point at the GitHub repo:
+Local path:
 
 ```
-/plugin marketplace add Randomblock1/skills
+/plugin marketplace add ~/git/skills
 ```
 
-## Adding a new skill
+## Layout
 
-1. Create `plugins/<name>/.claude-plugin/plugin.json` with `name`, `description`, `version`.
-2. Put the skill itself in `plugins/<name>/skills/<name>/SKILL.md` (plus any `references/` files it needs).
-3. Add an entry for it to `.claude-plugin/marketplace.json`.
+Skills follow the open Agent Skills format:
+
+```
+skills/<name>/SKILL.md
+skills/<name>/…          # optional references, scripts, assets
+```
+
+Claude Code marketplace metadata lives in `.claude-plugin/marketplace.json` and points at those same skill folders (same pattern as [anthropics/skills](https://github.com/anthropics/skills)).
+
+## Adding a skill
+
+1. Create `skills/<name>/SKILL.md` with `name` and `description` frontmatter (name must match the folder).
+2. Add any supporting files under that skill directory (`references/`, `scripts/`, etc.).
+3. Register it in `.claude-plugin/marketplace.json` if you want it installable via Claude Code's marketplace.
