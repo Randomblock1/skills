@@ -70,3 +70,7 @@ Codex/ChatGPT marketplace metadata lives in `.codex-plugin/plugin.json` (which p
 1. Create `skills/<name>/SKILL.md` with `name` and `description` frontmatter (name must match the folder).
 2. Add any supporting files under that skill directory (`references/`, `scripts/`, etc.).
 3. Register it in `.claude-plugin/marketplace.json` if you want it installable via Claude Code's marketplace. The Codex plugin already bundles the whole `skills/` tree, so no extra step is needed there.
+
+## Changing a skill
+
+Any change under `skills/` (content or a new skill) must bump the marketplace versions that ship those skills: `metadata.version` in `.claude-plugin/marketplace.json` and `version` in `.codex-plugin/plugin.json`. CI enforces this — `scripts/check-versions.py` diffs `skills/` against the base revision and fails if either version wasn't increased.
