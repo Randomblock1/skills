@@ -59,8 +59,10 @@ skills/<name>/…          # optional references, scripts, assets
 
 Claude Code marketplace metadata lives in `.claude-plugin/marketplace.json` and points at those same skill folders (same pattern as [anthropics/skills](https://github.com/anthropics/skills)).
 
+Codex/ChatGPT marketplace metadata lives in `.codex-plugin/plugin.json` (which points `skills` at `./skills/`) plus `.agents/plugins/marketplace.json`, the same layout as [openai/plugins](https://github.com/openai/plugins) and [JITx-Inc/jitx-skills](https://github.com/JITx-Inc/jitx-skills).
+
 ## Adding a skill
 
 1. Create `skills/<name>/SKILL.md` with `name` and `description` frontmatter (name must match the folder).
 2. Add any supporting files under that skill directory (`references/`, `scripts/`, etc.).
-3. Register it in `.claude-plugin/marketplace.json` if you want it installable via Claude Code's marketplace.
+3. Register it in `.claude-plugin/marketplace.json` if you want it installable via Claude Code's marketplace. The Codex plugin already bundles the whole `skills/` tree, so no extra step is needed there.

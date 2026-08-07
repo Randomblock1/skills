@@ -11,14 +11,16 @@ allocator. This skill finds where code fights that grain and proposes safe fixes
 list; do not edit code unless the user asks.
 
 Definitions, technique catalog, and the two machine-facts lists live in
-[TECHNIQUES.md](TECHNIQUES.md) — read it before step 2.
+[TECHNIQUES.md](TECHNIQUES.md) — read it before step 2, and read the one matching
+`references/lang-<lang>.md` for your target language.
 
 ## 1. Map the traffic
 
 **Traffic = bytes touched × frequency.** Walk the code and tag every loop and data path
 with its rate class: per-element × stream rate, per-frame, per-user-action, or once
-(*cold*). Estimate bytes touched from the real container element sizes (compute
-`size_of`, don't guess). Multiply out.
+(*cold*). Estimate bytes touched from the real container element sizes (compute the
+actual element size in your language — `size_of`/`sizeof`/layout, don't guess).
+Multiply out.
 
 Completion: every loop in scope carries a rate class and a bytes-touched figure, and the
 dominant traffic path is identified by arithmetic, not vibes. Most codebases have exactly
