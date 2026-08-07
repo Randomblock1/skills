@@ -6,9 +6,11 @@ Personal [Agent Skills](https://agentskills.io/) for coding agents — Claude Co
 
 | Skill | Description |
 | --- | --- |
-| [learnings](./skills/learnings) | Extract non-obvious session learnings into `AGENTS.md` |
+| [full-review](./skills/full-review) | Thorough, verification-first review of a working diff |
 | [just-use-postgres](./skills/just-use-postgres) | Prefer Postgres-based data infrastructure where it fits |
+| [learnings](./skills/learnings) | Extract non-obvious session learnings into `AGENTS.md` |
 | [mechanical-sympathy](./skills/mechanical-sympathy) | Find, verify, and rank CPU-friendly hot-path improvements |
+| [trim-comments](./skills/trim-comments) | Trim comments and docs so every comment earns its place |
 
 ## Install (Codex, Cursor, Claude Code, …)
 
@@ -37,9 +39,11 @@ Still works as a Claude Code plugin marketplace:
 
 ```
 /plugin marketplace add Randomblock1/skills
-/plugin install learnings@randomblock1-skills
+/plugin install full-review@randomblock1-skills
 /plugin install just-use-postgres@randomblock1-skills
+/plugin install learnings@randomblock1-skills
 /plugin install mechanical-sympathy@randomblock1-skills
+/plugin install trim-comments@randomblock1-skills
 ```
 
 Local path:

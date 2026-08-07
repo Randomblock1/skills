@@ -10,6 +10,13 @@
   },
   "plugins": [
     {
+      "name": "full-review",
+      "description": "Thorough, patterns-tuned code review of a working diff — diff hygiene plus ten verification-backed dimensions",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/full-review"]
+    },
+    {
       "name": "learnings",
       "description": "Extract non-obvious learnings from a session into AGENTS.md",
       "source": "./",
@@ -29,6 +36,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./skills/mechanical-sympathy"]
+    },
+    {
+      "name": "trim-comments",
+      "description": "Audit and trim comments and docs so every comment earns its place",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/trim-comments"]
     }
   ]
 }
