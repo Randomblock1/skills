@@ -6,11 +6,11 @@ Personal [Agent Skills](https://agentskills.io/) for coding agents — Claude Co
 
 | Skill | Description |
 | --- | --- |
-| [full-review](./skills/full-review) | Thorough, verification-first review of a working diff |
-| [just-use-postgres](./skills/just-use-postgres) | Prefer Postgres-based data infrastructure where it fits |
-| [learnings](./skills/learnings) | Extract non-obvious session learnings into `AGENTS.md` |
-| [mechanical-sympathy](./skills/mechanical-sympathy) | Find, verify, and rank CPU-friendly hot-path improvements |
-| [trim-comments](./skills/trim-comments) | Trim comments and docs so every comment earns its place |
+| [full-review](./skills/full-review) | Thorough, patterns-tuned code review of a working diff — diff hygiene plus ten verification-backed dimensions |
+| [just-use-postgres](./skills/just-use-postgres) | Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit |
+| [learnings](./skills/learnings) | Extract non-obvious learnings from a session into AGENTS.md |
+| [mechanical-sympathy](./skills/mechanical-sympathy) | Find, verify, and rank CPU-friendly improvements in hot paths (cache layout, branches, allocations) |
+| [trim-comments](./skills/trim-comments) | Audit and trim comments and docs so every comment earns its place |
 
 ## Install (Codex, Cursor, Claude Code, …)
 
@@ -52,25 +52,14 @@ Local path:
 /plugin marketplace add ~/git/skills
 ```
 
-## Layout
-
-Skills follow the open Agent Skills format:
-
-```
-skills/<name>/SKILL.md
-skills/<name>/…          # optional references, scripts, assets
-```
-
-Claude Code marketplace metadata lives in `.claude-plugin/marketplace.json` and points at those same skill folders (same pattern as [anthropics/skills](https://github.com/anthropics/skills)).
-
-Codex/ChatGPT marketplace metadata lives in `.codex-plugin/plugin.json` (which points `skills` at `./skills/`) plus `.agents/plugins/marketplace.json`, the same layout as [openai/plugins](https://github.com/openai/plugins) and [JITx-Inc/jitx-skills](https://github.com/JITx-Inc/jitx-skills).
-
 ## Adding a skill
 
 1. Create `skills/<name>/SKILL.md` with `name` and `description` frontmatter (name must match the folder).
-2. Add any supporting files under that skill directory (`references/`, `scripts/`, etc.).
-3. Register it in `.claude-plugin/marketplace.json` if you want it installable via Claude Code's marketplace. The Codex plugin already bundles the whole `skills/` tree, so no extra step is needed there.
+2. Add any supporting files under that skill directory.
+3. Add a row to the skills table above and a plugin entry in `.claude-plugin/marketplace.json`. The Codex and Agents marketplaces bundle the whole `skills/` tree, so no extra step is needed there.
+
+CI (`scripts/check-marketplaces.py`) fails if a skill is missing from any manifest or the README table.
 
 ## Changing a skill
 
-Any change under `skills/` (content or a new skill) must bump the marketplace versions that ship those skills: `metadata.version` in `.claude-plugin/marketplace.json` and `version` in `.codex-plugin/plugin.json`. CI enforces this — `scripts/check-versions.py` diffs `skills/` against the base revision and fails if either version wasn't increased.
+Any change under `skills/` must bump the marketplace versions that ship those skills: `metadata.version` in `.claude-plugin/marketplace.json` and `version` in `.codex-plugin/plugin.json`. CI (`scripts/check-versions.py`) diffs `skills/` against the base revision and fails if either version wasn't increased.
