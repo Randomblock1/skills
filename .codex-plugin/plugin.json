@@ -1,6 +1,6 @@
 {
   "name": "randomblock1-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Personal agent skills for Claude Code, Codex, ChatGPT, Cursor, and other Agent Skills clients.",
   "author": {
     "name": "Benjamin Gonzalez",
@@ -16,6 +16,7 @@
     "learnings",
     "postgres",
     "mechanical-sympathy",
+    "gpu",
     "code-review",
     "trim-comments"
   ],
@@ -23,7 +24,7 @@
   "interface": {
     "displayName": "Randomblock1 Skills",
     "shortDescription": "Personal agent skills for Codex, ChatGPT, and Claude Code",
-    "longDescription": "Reusable agent skills: extract session learnings into AGENTS.md, prefer Postgres-based data infrastructure, find CPU-friendly hot-path improvements, review diffs against ten verification-backed dimensions, and trim comments to what earns its place.",
+    "longDescription": "Reusable agent skills: extract session learnings into AGENTS.md, prefer Postgres-based data infrastructure, find CPU-friendly hot-path improvements, tune GPU kernels and pipelines, review diffs against ten verification-backed dimensions, and trim comments to what earns its place.",
     "developerName": "Benjamin Gonzalez",
     "category": "Developer Tools",
     "capabilities": [

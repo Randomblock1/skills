@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Personal agent skills for Claude Code, Codex, Cursor, and other Agent Skills clients",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
@@ -15,6 +15,13 @@
       "source": "./",
       "strict": false,
       "skills": ["./skills/full-review"]
+    },
+    {
+      "name": "gpu-sympathy",
+      "description": "Find, verify, and rank GPU-friendly improvements in kernels and GPU pipelines (coalescing, tiling, occupancy, divergence, transfers)",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/gpu-sympathy"]
     },
     {
       "name": "learnings",
