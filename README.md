@@ -6,6 +6,7 @@ Personal [Agent Skills](https://agentskills.io/) for coding agents — Claude Co
 
 | Skill | Description |
 | --- | --- |
+| [auto-optimize](./skills/auto-optimize) | Turn a codebase into an autonomous keep-or-revert optimization loop judged by a frozen measurement harness |
 | [full-review](./skills/full-review) | Thorough, patterns-tuned code review of a working diff — diff hygiene plus ten verification-backed dimensions |
 | [gpu-sympathy](./skills/gpu-sympathy) | Find, verify, and rank GPU-friendly improvements in kernels and GPU pipelines (coalescing, tiling, occupancy, divergence, transfers) |
 | [just-use-postgres](./skills/just-use-postgres) | Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit |
@@ -40,6 +41,7 @@ Still works as a Claude Code plugin marketplace:
 
 ```
 /plugin marketplace add Randomblock1/skills
+/plugin install auto-optimize@randomblock1-skills
 /plugin install full-review@randomblock1-skills
 /plugin install gpu-sympathy@randomblock1-skills
 /plugin install just-use-postgres@randomblock1-skills

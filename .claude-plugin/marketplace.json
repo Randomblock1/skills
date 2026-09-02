@@ -6,9 +6,16 @@
   },
   "metadata": {
     "description": "Personal agent skills for Claude Code, Codex, Cursor, and other Agent Skills clients",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
+    {
+      "name": "auto-optimize",
+      "description": "Turn a codebase into an autonomous keep-or-revert optimization loop judged by a frozen measurement harness",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/auto-optimize"]
+    },
     {
       "name": "full-review",
       "description": "Thorough, patterns-tuned code review of a working diff — diff hygiene plus ten verification-backed dimensions",
