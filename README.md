@@ -6,11 +6,13 @@ Personal [Agent Skills](https://agentskills.io/) for coding agents — Claude Co
 
 | Skill | Description |
 | --- | --- |
+| [android-architecture-review](./skills/android-architecture-review) | Review and decide Android/Kotlin architecture — state ownership, effects, Compose performance, module boundaries, 2026 toolchain |
 | [auto-optimize](./skills/auto-optimize) | Turn a codebase into an autonomous keep-or-revert optimization loop judged by a frozen measurement harness |
 | [full-review](./skills/full-review) | Thorough, patterns-tuned code review of a working diff — diff hygiene plus ten verification-backed dimensions |
 | [gpu-sympathy](./skills/gpu-sympathy) | Find, verify, and rank GPU-friendly improvements in kernels and GPU pipelines (coalescing, tiling, occupancy, divergence, transfers) |
 | [just-use-postgres](./skills/just-use-postgres) | Architecture guidance for choosing data infrastructure, defaulting to Postgres-based alternatives where they fit |
 | [learnings](./skills/learnings) | Extract non-obvious learnings from a session into AGENTS.md |
+| [m3-expressive-compose](./skills/m3-expressive-compose) | Audit and implement Material 3 Expressive in Jetpack Compose and Wear Compose Material 3 |
 | [mechanical-sympathy](./skills/mechanical-sympathy) | Find, verify, and rank CPU-friendly improvements in hot paths (cache layout, branches, allocations) |
 | [trim-comments](./skills/trim-comments) | Audit and trim comments and docs so every comment earns its place |
 
@@ -41,11 +43,13 @@ Still works as a Claude Code plugin marketplace:
 
 ```
 /plugin marketplace add Randomblock1/skills
+/plugin install android-architecture-review@randomblock1-skills
 /plugin install auto-optimize@randomblock1-skills
 /plugin install full-review@randomblock1-skills
 /plugin install gpu-sympathy@randomblock1-skills
 /plugin install just-use-postgres@randomblock1-skills
 /plugin install learnings@randomblock1-skills
+/plugin install m3-expressive-compose@randomblock1-skills
 /plugin install mechanical-sympathy@randomblock1-skills
 /plugin install trim-comments@randomblock1-skills
 ```
